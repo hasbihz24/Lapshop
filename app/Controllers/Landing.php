@@ -8,6 +8,13 @@ class Landing extends BaseController
 {
     public function index()
     {
-        return view('LandingView');
+        echo view('navbar');
+        echo view('LandingView');
+    }
+
+    public function pageBeli()
+    {
+        echo view('navbar');
+        echo view('beliView');
     }
 }

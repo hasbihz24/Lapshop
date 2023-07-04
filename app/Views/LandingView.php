@@ -11,31 +11,6 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-success sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand text-light" href="#">Navbar</a>
-            <button class="navbar-toggler avbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled text-light">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light " type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
     <div class="musthead">
         <div class="container px-4">
             <div class="row px-1 px-lg-3 align-items-center justify-content-left text-left">
@@ -45,7 +20,7 @@
                     <p class="text-white mb-5 ">Selamat datang di situs penjualan laptop terpercaya! Kami menyediakan beragam pilihan laptop terbaik untuk memenuhi kebutuhan Anda</p>
                     <a class="btn btn-success btn-xl" href="#about">Find Out More</a>
                 </div>
-                <div class="col-sm-4  mb-5">
+                <div class="col-sm-4 mb-5">
                     <img src="/img/masthead-img.png">
                 </div>
             </div>
@@ -84,10 +59,55 @@
             </div>
         </div>
     </div>
-    <div class="container mx-5 py-5">
-        <div class="row">
-
-        </div>
+    <footer style="background-color: #36454F;">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <h5 class="mb-3 text-white">Lapshop</h5>
+                    <p style="color: white;">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                        molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+                        voluptatem veniam, est atque cumque eum delectus sint!
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-3 text-white">links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-1">
+                            <a href="#!" style="color: white;">FAQ</a>
+                        </li>
+                        <li class="mb-1">
+                            <a href="#!" style="color: white;">Classes</a>
+                        </li>
+                        <li class="mb-1">
+                            <a href="#!" style="color: white;">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#!" style="color: white;">Safety</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="mb-1 text-white">opening hours</h5>
+                    <table class="table" style="border-color: #666;">
+                        <tbody>
+                            <tr>
+                                <td>Mon - Fri:</td>
+                                <td>8am - 9pm</td>
+                            </tr>
+                            <tr>
+                                <td>Sat - Sun:</td>
+                                <td>8am - 1am</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2020 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/">Lapshop</a>
+            </div>
+    </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

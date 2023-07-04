@@ -83,3 +83,37 @@
   .musthead img{
     width: 400px;
   }
+
+  tr td {
+    color: white;
+  }
+
+  .icon a i {
+    color: #20c997; 
+    height:20px;
+  }
+
+  .icon a {
+    color: var(--bs-success);
+  }
+
+  .icon a:hover i {
+    color: #029b6d; 
+
+  }
+
+  .savemoney img{
+    width: 360px;
+  }
+
+  .savemoney{
+    width: 60%;
+    background-size: cover;
+    background: #2e8b5e;
+    border-radius: 75px;
+    
+  }
+
+  .maincontent{
+    width: 80%;
+  }
