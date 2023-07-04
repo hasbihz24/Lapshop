@@ -109,11 +109,27 @@
   .savemoney{
     width: 60%;
     background-size: cover;
-    background: #2e8b5e;
+    background: #18946f;
     border-radius: 75px;
     
   }
 
   .maincontent{
     width: 80%;
+  }
+
+  .tampilHasil{
+    background-color: #f4f4f4;
+  }
+
+  .tampilHasil p{
+    color: #aaa;
+  }
+  .info-laptop img{
+    width: 120px;
+  }
+
+  .info-laptop a{
+    color: var(--bs-info);
+    text-decoration: none;
   }
