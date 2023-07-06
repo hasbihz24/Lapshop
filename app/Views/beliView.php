@@ -23,7 +23,7 @@
     </div>
     <div class="maincontent">
         <div class="row">
-            <div class="col-sm-3" style="height: 300px;">
+            <div class="col-sm-3">
             </div>
             <div class="col border border-secondary rounded" style="height: fit-content;">
                 <form>

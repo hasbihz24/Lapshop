@@ -89,7 +89,8 @@
   }
 
   .icon a i {
-    color: #20c997; 
+    /* color: #20c997;  */
+    color: var(--bs-white);
     height:20px;
   }
 
@@ -133,3 +134,7 @@
     color: var(--bs-info);
     text-decoration: none;
   }
+
+.list-nav ul li:hover a{
+  color: var(--bs-success);
+}

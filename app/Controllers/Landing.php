@@ -17,4 +17,8 @@ class Landing extends BaseController
         echo view('navbar');
         echo view('beliView');
     }
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
 }

@@ -33,6 +33,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::login');
 $routes->post('/register', 'Home::register');
 $routes->post('/aksiLogin', 'Home::aksiLogin');
+$routes->post('/dashboard', 'Home::dashboard');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
