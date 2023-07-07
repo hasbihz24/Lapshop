@@ -21,4 +21,8 @@ class Landing extends BaseController
     {
         return view('dashboard');
     }
+    public function detail(){
+        echo view('navbar');
+        echo view('detailView');
+    }
 }

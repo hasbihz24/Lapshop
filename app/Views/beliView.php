@@ -94,7 +94,7 @@
                                     <img src="/img/laptop.jpg" alt="">
                                 </div>
                                 <div class="col">
-                                    <h4 class="my-2"><a href="">Laptop Asus TUF</a></h4>
+                                    <h4 class="my-2"><a href="/Landing/detail">Laptop Asus TUF</a></h4>
                                     <p>Merek : ASUS</p>
                                     <p>Gaming Laptop</p>
                                     <p>Rating 5.0 <i class="fa-solid fa-star" style="color: gold;"></i></p>
