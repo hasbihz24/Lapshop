@@ -14,10 +14,15 @@
                 </li>
             </ul>
             <div class="icon">
-                <a href="" class="p-0 mx-2">
-                    <i class="fa-solid fa-user"></i>
+                <?php if (session()->get('logged_in') == false) {
+                    $Lpath = '/Home/login';
+                }else{
+                    $Lpath = '/Landing/akun';
+                } ?>
+                <a href=" <?= $Lpath; ?>" class="p-0 mx-2 px-1">
+                    <i class="fa-solid fa-user"></i> <?= session()->get('username'); ?>
                 </a>
-                <a href="" class="p-0 mx-2">
+                <a href="/Landing/keranjang" class="p-0 mx-2">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
             </div>

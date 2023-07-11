@@ -95,10 +95,17 @@
   }
 
   .icon a {
-    color: var(--bs-success);
+    background-color: var(--bs-success);
+    color: white;
+    text-decoration: none;
   }
 
   .icon a:hover i {
+    color: #029b6d; 
+
+  }
+
+  .icon a:hover{
     color: #029b6d; 
 
   }
@@ -137,4 +144,13 @@
 
 .list-nav ul li:hover a{
   color: var(--bs-success);
+}
+
+.hargaCard ul li p{
+  margin-bottom: 2;
+}
+
+.bodyModal a{
+  color: var(--bs-info);
+  text-decoration: none;
 }

@@ -86,7 +86,12 @@ button {
   text-decoration: underline;
 }
 
-.text-light-title {
+.text-light-title a{
   font-family: sans-serif;
   color: white;
+  text-decoration: none;
+}
+
+.container-Register{
+  height: fit-content;
 }

@@ -30,10 +30,11 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::login');
-$routes->post('/register', 'Home::register');
-$routes->post('/aksiLogin', 'Home::aksiLogin');
+$routes->get('/', 'Landing::index');
+$routes->post('/Home/register', 'Home::register');
+$routes->post('/Home/aksiLogin', 'Home::aksiLogin');
 $routes->post('/dashboard', 'Home::dashboard');
+$routes->get('/(:segment)', 'Landing::detail/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -10,15 +10,15 @@
 </head>
 
 <body class="">
-  <div class="container-new bg-success">
+  <div class="container container-Register bg-success">
     <img class="img" src="\img\img.png">
-    <h2 class="text-light">LAPSHOP</h2>
+    <h2 class="text-light-title"><a href="/">LAPSHOP</a></h2>
     <?php if (!empty(session()->getFlashdata('error'))) : ?>
       <div class="alert alert-danger alert-dismissible fade show" role="alert">
         <?php echo session()->getFlashdata('error'); ?>
       </div>
     <?php endif; ?>
-    <form class="row g-3 text-light" action="/register" method="post">
+    <form class="row g-3 text-light" action="/Home/register" method="post">
       <div class="col-md-6">
         <label for="username" class="form-label">Username</label>
         <input type="text" class="form-control" id="username" name="username">

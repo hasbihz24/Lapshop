@@ -87,24 +87,27 @@
                     <p class="mx-2 my-1">Menampilkan 1000 dari hasil pencarian</p>
                 </div>
                 <div class="info-laptop">
-                    <div class="row m-4">
-                        <div class="col border">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <img src="/img/laptop.jpg" alt="">
-                                </div>
-                                <div class="col">
-                                    <h4 class="my-2"><a href="/Landing/detail">Laptop Asus TUF</a></h4>
-                                    <p>Merek : ASUS</p>
-                                    <p>Gaming Laptop</p>
-                                    <p>Rating 5.0 <i class="fa-solid fa-star" style="color: gold;"></i></p>
+                    <?php foreach ($laptop as $lp) : ?>
+                        <?php $hargaFormat = number_format($lp['harga'],0,',','.'); ?>
+                        <div class="row m-4">
+                            <div class="col border">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <img src="/img/<?= $lp['gambar']; ?>" alt="">
+                                    </div>
+                                    <div class="col">
+                                        <h4 class="my-2"><a href="/<?= $lp['slug']; ?>"><?= $lp['nama']; ?></a></h4>
+                                        <p>Merek : <?= $lp['merek']; ?></p>
+                                        <p><?= $lp['jenis']; ?> Laptop</p>
+                                        <p>Rating 5.0 <i class="fa-solid fa-star" style="color: gold;"></i></p>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col-sm-3 border">
+                                <h5 class="my-3">Rp. <?= $hargaFormat; ?></h5>
+                            </div>
                         </div>
-                        <div class="col-sm-3 border">
-                            <h5 class="my-3">Rp. 12.000.000</h5>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                     <div class="row m-4">
                         <div class="col border">
                             <div class="row">

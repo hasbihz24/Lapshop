@@ -12,12 +12,20 @@
 
 <body>
     <div class="container">
-        <div class="row h-100">
-            <div class="col-sm-4 bg-primary h-100">
-
+        <div class="row h-100 w-100">
+            <div class="col-sm-4 h-100">
+                <img src="/img/<?= $laptop['gambar']; ?>" alt="" style="width: 360px;" class="my-5">
             </div>
-            <div class="col bg-success h-100">
-
+            <div class="col ms-5 mt-5 h-100" style="width: 60%;">
+                <h2><?= $laptop['nama']; ?></h2>
+                <?php $hargaFormat = number_format($laptop['harga'], 0, ',', '.'); ?>
+                <p>Terjual : 20 | Rating 4.9 <i class="fa-solid fa-star" style="color: gold;"></i></p>
+                <h1 class="my-4"><?= $hargaFormat; ?></h1>
+                    <?= $laptop['deskripsi']; ?>
+                <p><?= $laptop['jenis']; ?> Laptop</p>
+                <div class="align-items-center justify-content-left my-5 ms-5 px-5">
+                    <a href="/Pesan/aksikeranjang" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="false">Tambahkan ke Keranjang</a>
+                </div>
             </div>
         </div>
     </div>

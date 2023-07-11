@@ -64,16 +64,37 @@ class Home extends BaseController
             'no_telp' => $this->request->getVar('no_telp')
         ]);
 
-        return redirect()->to('/');
+        return redirect()->to('/Home/login');
     }
 
     public function login()
     {
+        session()->set([
+            'username' => '',
+            'logged_in' => false
+        ]);
         return view('login');
     }
 
     public function aksiLogin()
     {
+        if (!$this->validate([
+            'username' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Username Harus Diisi',
+                ]
+            ],
+            'password' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Password Harus Diisi'
+                ]
+            ]
+        ])) {
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->to('/Home/login');
+        }
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
         $dataUser = $this->userModel->where([
@@ -86,10 +107,10 @@ class Home extends BaseController
                 'username' => $username,
                 'logged_in' => TRUE
             ]);
-            return redirect()->to('/Landing');
+            return redirect()->to('/');
         } else {
             session()->setFlashdata('error', 'Username & Password Salah');
-            return redirect()->to('/');
+            return redirect()->to('/Home/login');
         }
         // else {
         //     session()->setFlashdata('error', 'Username & Password Salah');

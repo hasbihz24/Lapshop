@@ -11,15 +11,15 @@
 </head>
 
 <body class="">
-  <div class="container">
+  <div class="container" style="height: fit-content;">
     <img class="img" src="/img/img.png" />
-    <h2 class="text-light-title">LAPSHOP</h2>
+    <h2 class="text-light-title"><a href="/">LAPSHOP</a></h2>
     <?php if (!empty(session()->getFlashdata('error'))) : ?>
       <div class="alert alert-danger alert-dismissible fade show" role="alert">
         <?php echo session()->getFlashdata('error'); ?>
       </div>
     <?php endif; ?>
-    <form class="form text-light" action="/aksiLogin" method="post">
+    <form class="form text-light" action="/Home/aksiLogin" method="post">
       <div class="form-login text-light">
         <i class="uil uil-user"></i>
         <label for="username">Username</label><br />
@@ -37,7 +37,7 @@
       </div>
       <div class="reg">
         Belum mempunyai akun ?
-        <a href="Login/login.html">Register</a>
+        <a href="/Home/index">Register</a>
       </div>
     </form>
   </div>
