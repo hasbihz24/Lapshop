@@ -103,7 +103,6 @@
                             </tbody>
                         </table>
                     </table>
-                    <a href="" class="btn btn-success">Tambah Data</a>
                 </div>
             </div>
         </div>
