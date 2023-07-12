@@ -154,3 +154,7 @@
   color: var(--bs-info);
   text-decoration: none;
 }
+
+.card i{
+  color: #029b6d;
+}

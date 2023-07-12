@@ -15,20 +15,14 @@
     <a href="#" class="navbar-brand h3 mx-auto text-white">Selamat Datang di Aplikasi Lapshop</a>
   </nav>
   <div class="mainadmin" style="height: 100%;">
-    <div class="bg-success-subtle" style="height: 100%;">
-      <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px; height: 100%">
+    <div class="bg-success-subtle row" style="height: 100%;">
+      <div class="col-md-2 d-flex flex-column flex-shrink-0 p-3 bg-light" style="height: 100%">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
           <img src="/img/img.png" width="100" height="100" alt="">
           <span class="fs-4">Admin Lapshop</span>
         </a>
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
-          <li class="nav-item mx-2 my-2 active p-1">
-            <i class="fa-solid fa-house"></i>
-            <a href="#" class="nav-link link-dark d-inline" aria-current="page">
-              Dashboard
-            </a>
-          </li>
           <li class="nav-item mx-2 my-2">
             <i class="fa-solid fa-house"></i>
             <a href="#" class="nav-link link-dark d-inline" aria-current="page">
@@ -37,32 +31,72 @@
           </li>
           <li class="nav-item mx-2 my-2">
             <i class="fa-solid fa-house"></i>
-            <a href="#" class="nav-link link-dark d-inline" aria-current="page">
+            <a href="/Admin/transaksi" class="nav-link link-dark d-inline" aria-current="page">
               Transaksi
             </a>
           </li>
         </ul>
         <hr>
-        <div class="dropdown">
-          <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-            <strong>mdo</strong>
-          </a>
-          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-            <li><a class="dropdown-item" href="#">New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
-          </ul>
+      </div>
+      <div class="col">
+        <div class="container">
+          <h1 class="mt-4 mb-4">Admin LapShop</h1>
+          <?php if (!empty(session()->getFlashdata('pesan'))) : ?>
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+              <?php echo session()->getFlashdata('pesan'); ?>
+            </div>
+          <?php endif; ?>
+          <table class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Gambar</th>
+                  <th scope="col">Nama</th>
+                  <th scope="col">Merek</th>
+                  <th scope="col">Jenis</th>
+                  <th scope="col">Jumlah</th>
+                  <th scope="col">Harga</th>
+                  <th scope="col">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($laptop as $lp) : ?>
+                  <tr>
+                    <td><img src="/img/<?= $lp['gambar']; ?>" alt="" style="width: 50px;"></td>
+                    <td><?= $lp['nama']; ?></td>
+                    <td><?= $lp['merek']; ?></td>
+                    <td><?= $lp['jenis']; ?></td>
+                    <td><?= $lp['jumlah']; ?></td>
+                    <td><?= $lp['harga']; ?></td>
+                    <td>
+                      <a href="/Edit/<?= $lp['slug']; ?>" class="btn btn-primary">Edit</a>
+                      <a href="/Hapus/<?= $lp['slug']; ?>" class="btn btn-danger delete-btn">Hapus</a>
+                    </td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+          </table>
+          <a href="/Admin/tambah" class="btn btn-success">Tambah Data</a>
         </div>
       </div>
-
-
     </div>
   </div>
+  <script>
+    var deleteLinks = document.querySelectorAll('.delete-btn');
+
+    deleteLinks.forEach(function(link) {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        var confirmDelete = confirm('Apakah Anda yakin ingin menghapus data ini?');
+
+        if (confirmDelete) {
+          window.location.href = link.href;
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

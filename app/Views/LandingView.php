@@ -18,7 +18,7 @@
                     <h1 class="text-white font-weight-bold">Tempat Beli Laptop Dengan Kualitas Terbaik dan Harga Terjangkau</h1>
                     <hr class="divider" />
                     <p class="text-white mb-5 ">Selamat datang di situs penjualan laptop terpercaya! Kami menyediakan beragam pilihan laptop terbaik untuk memenuhi kebutuhan Anda</p>
-                    <a class="btn btn-success btn-xl" href="#about">Find Out More</a>
+                    <a class="btn btn-success btn-xl" href="/Landing/pageBeli">Find Out More</a>
                 </div>
                 <div class="col-sm-4 mb-5">
                     <img src="/img/masthead-img.png">
@@ -33,16 +33,16 @@
                     <div class="card-body  justify-content-center text-center">
                         <i class="card-title fa-solid fa-thumbs-up fa-5x "></i>
                         <h6 class="card-subtitle mb-2 text-body-secondary my-3">Kualitas Terbaik</h6>
-                        <p class="card-text my-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text my-3"> Lapshop memastikan bahwa setiap produk yang dijual adalah asli dan berkualitas. Lapshop hanya bekerja dengan merek laptop terpercaya dan memastikan bahwa semua produk yang ditawarkan adalah produk baru dan bermutu.</p>
                     </div>
                 </div>
             </div>
             <div class="col col-sm-3 mx-5">
                 <div class="card border-light" style="width: 20rem;">
                     <div class="card-body  justify-content-center text-center">
-                        <i class="card-title fa-solid fa-thumbs-up fa-5x "></i>
-                        <h6 class="card-subtitle mb-2 text-body-secondary my-3">Kualitas Terbaik</h6>
-                        <p class="card-text my-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <i class="card-title fa-solid fa-money-bill fa-5x"></i>
+                        <h6 class="card-subtitle mb-2 text-body-secondary my-3">Lebih Hemat</h6>
+                        <p class="card-text my-3">Lapshop menawarkan harga yang kompetitif dan penawaran menarik untuk memberikan nilai tambah kepada pelanggan. </p>
                     </div>
                 </div>
             </div>
@@ -51,9 +51,9 @@
             <div class="col-md-4" style="margin-left: 43px;">
                 <div class="card border-light" style="width: 24rem;">
                     <div class="card-body  justify-content-center text-center">
-                        <i class="card-title fa-solid fa-thumbs-up fa-5x "></i>
-                        <h6 class="card-subtitle mb-2 text-body-secondary my-3">Kualitas Terbaik</h6>
-                        <p class="card-text my-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <i class="card-title fa-solid fa-handshake fa-5x "></i>
+                        <h6 class="card-subtitle mb-2 text-body-secondary my-3">Terpercaya</h6>
+                        <p class="card-text my-3"> Lapshop memahami pentingnya pengalaman belanja online yang lancar dan memuaskan bagi pelanggan. Oleh karena itu, website Lapshop dirancang dengan antarmuka yang intuitif dan ramah pengguna. </p>
                     </div>
                 </div>
             </div>
@@ -65,42 +65,8 @@
                 <div class="col-lg-6 col-md-12 mb-4">
                     <h5 class="mb-3 text-white">Lapshop</h5>
                     <p style="color: white;">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                        molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                        voluptatem veniam, est atque cumque eum delectus sint!
+                        Lapshop adalah sebuah perusahaan website terkemuka dalam industri penjualan laptop. Dengan reputasi yang solid dan pengalaman bertahun-tahun, Lapshop telah menjadi tujuan utama bagi para konsumen yang mencari laptop berkualitas dengan layanan yang unggul.
                     </p>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="mb-3 text-white">links</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-1">
-                            <a href="#!" style="color: white;">FAQ</a>
-                        </li>
-                        <li class="mb-1">
-                            <a href="#!" style="color: white;">Classes</a>
-                        </li>
-                        <li class="mb-1">
-                            <a href="#!" style="color: white;">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="#!" style="color: white;">Safety</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="mb-1 text-white">opening hours</h5>
-                    <table class="table" style="border-color: #666;">
-                        <tbody>
-                            <tr>
-                                <td>Mon - Fri:</td>
-                                <td>8am - 9pm</td>
-                            </tr>
-                            <tr>
-                                <td>Sat - Sun:</td>
-                                <td>8am - 1am</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">

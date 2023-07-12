@@ -24,7 +24,7 @@
                     </div>
                 <?php endif; ?>
                 <?php $hargaFormat = number_format($laptop['harga'], 0, ',', '.'); ?>
-                <p>Terjual : 20 | Rating 4.9 <i class="fa-solid fa-star" style="color: gold;"></i></p>
+                <p>Stok : <?= $laptop['jumlah']; ?> | Rating 4.9 <i class="fa-solid fa-star" style="color: gold;"></i></p>
                 <h1 class="my-4"><?= $hargaFormat; ?></h1>
                 <?= $laptop['deskripsi']; ?>
                 <p><?= $laptop['jenis']; ?> Laptop</p>

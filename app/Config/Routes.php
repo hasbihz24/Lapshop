@@ -35,6 +35,12 @@ $routes->post('/Home/register', 'Home::register');
 $routes->post('/Home/aksiLogin', 'Home::aksiLogin');
 $routes->post('/dashboard', 'Home::dashboard');
 $routes->get('/(:segment)', 'Landing::detail/$1');
+$routes->get('/Admin', 'Admin::index');
+$routes->get('/Admin/index', 'Admin::index');
+$routes->get('/Edit/(:segment)','Admin::edit/$1');
+$routes->get('/Hapus/(:segment)','Admin::hapus/$1');
+$routes->get('/Kirim/(:segment)','Admin::kirim/$1');
+$routes->get('/Admin/tambah', 'Admin::tambah');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

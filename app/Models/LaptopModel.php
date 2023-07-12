@@ -8,6 +8,12 @@ class LaptopModel extends Model
 {
     protected $table = 'laptop';
     protected $primaryKey = 'id_laptop';
+    protected $returnType     = 'array';
+    protected $allowedFields = ['id_laptop', 'nama', 'merek', 'jenis','jumlah','harga','gambar', 'slug', 'deskripsi'];
+    protected $useTimestamps = true;
+    protected $dateFormat    = 'datetime';
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
     public function getLaptop($slug = false)
     {
         if ($slug == false) {
@@ -17,7 +23,8 @@ class LaptopModel extends Model
         return $this->where(['slug' => $slug])->first();
     }
 
-    public function searchLaptop($search){
+    public function searchLaptop($search)
+    {
         return $this->like('nama', $search)->findAll();
     }
 }

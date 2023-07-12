@@ -32,4 +32,5 @@ class KeranjangModel extends Model
     public function getJsonData($username = false){
         return $this->where(['username' => $username])->findColumn('id_laptop');
     }
+
 }

@@ -99,16 +99,20 @@ class Home extends BaseController
         $password = $this->request->getVar('password');
         $dataUser = $this->userModel->where([
             'username' => $username,
-            'pass' => $password
+            'pass' => $password,
         ])->first();
+        
 
-        if ($dataUser) {
+        if ($dataUser['status']==null) {
             session()->set([
                 'username' => $username,
                 'logged_in' => TRUE
             ]);
             return redirect()->to('/');
-        } else {
+        }elseif($dataUser['status']=='admin'){
+            return redirect()->to('/Admin/index');
+        }
+        else {
             session()->setFlashdata('error', 'Username & Password Salah');
             return redirect()->to('/Home/login');
         }

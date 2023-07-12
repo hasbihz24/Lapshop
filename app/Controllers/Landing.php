@@ -28,8 +28,11 @@ class Landing extends BaseController
 
     public function pageBeli()
     {
+        $laptop =  $this->laptopModel->getLaptop();
+        $count = count($laptop);
         $data = [
-            'laptop' => $this->laptopModel->getLaptop()
+            'laptop' => $laptop,
+            'count' => $count
         ];
         echo view('navbar');
         echo view('beliView', $data);
@@ -56,11 +59,15 @@ class Landing extends BaseController
     {
         $username = session()->get('username');
         $pesananDaftar = $this->pesanModel->getPesan($username);
-        $keranjang = $pesananDaftar['daftar_laptop'];
+        $JsonDecode = null;
+        if (!empty($pesananDaftar)) {
+            $keranjang = $pesananDaftar['daftar_laptop'];
+            $JsonDecode = json_decode($keranjang,true);
+        }
         $data = [
             'user' => $this->userModel->getUser($username),
             'pesan' => $pesananDaftar,
-            'daftar' => json_decode($keranjang,true)
+            'daftar' => $JsonDecode
         ];
         echo view('navbar');
         echo view('akunView', $data);
@@ -70,6 +77,9 @@ class Landing extends BaseController
     {
         $username = session()->get('username');
         $keranjangTampil = $this->keranjangModel->getKeranjang($username);
+        if(empty($keranjangTampil)){
+            return redirect()->to('/Landing/pageBeli');
+        }
         $jsonData = $keranjangTampil['id_laptop'];
         $dataArray = json_decode($jsonData, true);
         $data['keranjang'] = json_decode($jsonData, true);

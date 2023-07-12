@@ -38,6 +38,11 @@ class Validation extends BaseConfig
         'single' => 'CodeIgniter\Validation\Views\single',
     ];
 
+    // public $upload = [
+    //     'gambar' => 'uploaded[gambar]|mime_in[gambar,image/jpg,image/jpeg,image/png]|max_size[gambar,1024]',
+    // ];
+    
+
     // --------------------------------------------------------------------
     // Rules
     // --------------------------------------------------------------------
