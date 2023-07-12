@@ -37,12 +37,12 @@
                     <div class="isiPesan border mt-3">
                         <ul class="list-group">
                             <li class="list-group-item">
-                                <h5>No. Pesanan</h5>
+                                <h5><?= $pesan['id_pesan']; ?></h5>
                             </li>
                             <li class="list-group-item">
-                                <p>Total Harga</p>
-                                <p>Alamat Pengiriman</p>
-                                <p>No Penerima </p>
+                                <p><?= $pesan['total']; ?></p>
+                                <p><?= $user['alamat']; ?></p>
+                                <p><?= $user['no_telp']; ?> </p>
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     Detail Pesanan
@@ -57,15 +57,20 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body bodyModal">
-                                                <div class="row border my-4">
-                                                    <div class="col-sm-5">
-                                                        <img src="/img/laptop.jpg" alt="" style="width: 80px;">
-                                                    </div>
-                                                    <div class="col my-2">
-                                                        <h5> <a href=""> Laptop TUF</a></h4>
-                                                            <p>Rp. 12.000.000</p>
-                                                    </div>
-                                                </div>
+                                                <?php foreach ($daftar as $item) : ?>
+                                                    <?php foreach ($item as $ker) : ?>
+                                                        <?php $hargaFormat = number_format($ker['harga'], 0, ',', '.'); ?>
+                                                        <div class="row border my-4">
+                                                            <div class="col-sm-5">
+                                                                <img src="/img/<?= $ker['gambar']; ?>" alt="" style="width: 80px;">
+                                                            </div>
+                                                            <div class="col my-2">
+                                                                <h5> <a href="/<?= $ker['slug']; ?>"><?= $ker['nama']; ?></a></h4>
+                                                                    <p><?= $hargaFormat; ?></p>
+                                                            </div>
+                                                        </div>
+                                                    <?php endforeach; ?>
+                                                <?php endforeach; ?>
                                                 <div class="row border">
                                                     <div class="col-sm-5">
                                                         <img src="/img/laptop.jpg" alt="" style="width: 80px;">

@@ -58,7 +58,13 @@
                                 <?php $hargaFormat = number_format($hargatotal, 0, ',', '.'); ?>
                                 <p><?= $hargaFormat; ?></p>
                                 <div class="align-items-center justify-content-left mt-3 d-grid gap-2">
-                                    <button href="#" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="false">Beli</button>
+                                    <button type="submit" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="false">Beli</button>
+                                    <?php if (!empty(session()->getFlashdata('error'))) : ?>
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                            <?php echo session()->getFlashdata('error'); ?>
+                                        </div>
+                                    <?php endif; ?>
+
                                 </div>
                             </li>
                         </ul>

@@ -5,17 +5,20 @@ namespace App\Controllers;
 use App\Models\KeranjangModel;
 use App\Models\LaptopModel;
 use App\Models\UserModel;
+use App\Models\PesanModel;
 
 class Landing extends BaseController
 {
     protected $userModel;
     protected $laptopModel;
     protected $keranjangModel;
+    protected $pesanModel;
     public function __construct()
     {
         $this->userModel = new UserModel();
         $this->laptopModel = new LaptopModel();
         $this->keranjangModel = new KeranjangModel();
+        $this->pesanModel = new PesanModel();
     }
     public function index()
     {
@@ -40,6 +43,7 @@ class Landing extends BaseController
         session()->set([
             'slug' => $slug
         ]);
+        $username = session()->get('username');
         $laptopDetail = $this->laptopModel->getLaptop($slug);
         $data = [
             'laptop' => $laptopDetail
@@ -51,8 +55,12 @@ class Landing extends BaseController
     public function akun()
     {
         $username = session()->get('username');
+        $pesananDaftar = $this->pesanModel->getPesan($username);
+        $keranjang = $pesananDaftar['daftar_laptop'];
         $data = [
-            'user' => $this->userModel->getUser($username)
+            'user' => $this->userModel->getUser($username),
+            'pesan' => $pesananDaftar,
+            'daftar' => json_decode($keranjang,true)
         ];
         echo view('navbar');
         echo view('akunView', $data);
@@ -61,23 +69,11 @@ class Landing extends BaseController
     public function keranjang()
     {
         $username = session()->get('username');
-        $keranjangTampil = $this->keranjangModel->getKeranjang($username);   
+        $keranjangTampil = $this->keranjangModel->getKeranjang($username);
         $jsonData = $keranjangTampil['id_laptop'];
         $dataArray = json_decode($jsonData, true);
         $data['keranjang'] = json_decode($jsonData, true);
-        
-        // foreach ($dataArray as $item) {
-        // foreach ($item as $key => $data){
-        //     echo 'ID: ' . $key . '<br>';
-        //     echo 'Nama: ' . $data['nama'] . '<br>';
-        //     echo 'Harga: ' . $data['harga'] . '<br>';
-        //     echo 'Gambar: ' . $data['gambar'] . '<br>';
-        //     echo 'Slug: ' . $data['slug'] . '<br>';
-        //     echo '<br>';
-        // }}
-        
         echo view('navbar');
         echo view('keranjangView', $data);
     }
 }
-
