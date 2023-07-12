@@ -26,10 +26,10 @@
             <div class="col-sm-3">
             </div>
             <div class="col border border-secondary rounded" style="height: fit-content;">
-                <form>
+                <form action="/Search/searchBar" method="post">
                     <div class="input-group mb-3 my-4">
-                        <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
-                        <button class="btn btn-outline-success" type="button" id="button-addon2">Search</button>
+                        <input type="text" name="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-success" type="submit" id="button-addon2">Search</button>
                     </div>
                 </form>
                 <div>

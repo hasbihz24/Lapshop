@@ -16,4 +16,8 @@ class LaptopModel extends Model
 
         return $this->where(['slug' => $slug])->first();
     }
+
+    public function searchLaptop($search){
+        return $this->like('nama', $search)->findAll();
+    }
 }
