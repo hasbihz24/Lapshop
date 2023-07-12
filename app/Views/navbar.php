@@ -16,13 +16,15 @@
             <div class="icon">
                 <?php if (session()->get('logged_in') == false) {
                     $Lpath = '/Home/login';
+                    $Lpath2 = '/Home/login';
                 }else{
+                    $Lpath2 = '/Landing/keranjang';
                     $Lpath = '/Landing/akun';
                 } ?>
                 <a href=" <?= $Lpath; ?>" class="p-0 mx-2 px-1">
                     <i class="fa-solid fa-user"></i> <?= session()->get('username'); ?>
                 </a>
-                <a href="/Landing/keranjang" class="p-0 mx-2">
+                <a href="<?= $Lpath2; ?>" class="p-0 mx-2">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
             </div>

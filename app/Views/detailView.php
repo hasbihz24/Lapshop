@@ -29,7 +29,13 @@
                 <?= $laptop['deskripsi']; ?>
                 <p><?= $laptop['jenis']; ?> Laptop</p>
                 <div class="align-items-center justify-content-left my-5 ms-5 px-5">
-                    <a href="/Pesan/aksikeranjang" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="false">Tambahkan ke Keranjang</a>
+                    <?php if (session()->get('logged_in') == false) {
+                        $LpathK = '/Home/login';
+                    } else {
+                        $LpathK = '/Pesan/aksikeranjang';
+                    } ?>
+
+                    <a href="<?= $LpathK; ?>" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="false">Tambahkan ke Keranjang</a>
                 </div>
             </div>
         </div>
