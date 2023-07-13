@@ -70,18 +70,20 @@ class Search extends BaseController
             foreach ($JsonDecode as $data) {
                 foreach ($data as $ker) {
                     $laptopTampil = $this->laptopModel->getLaptop($ker['slug']);
-                    $laptopPesan = [
-                        $h => [
-                            $laptopTampil['slug'] => [
-                                'nama' => $laptopTampil['nama'],
-                                'harga' => $laptopTampil['harga'],
-                                'gambar' => $laptopTampil['gambar'],
-                                'slug' => $laptopTampil['slug']
+                    if (!empty($laptopTampil)) {
+                        $laptopPesan = [
+                            $h => [
+                                $laptopTampil['slug'] => [
+                                    'nama' => $laptopTampil['nama'],
+                                    'harga' => $laptopTampil['harga'],
+                                    'gambar' => $laptopTampil['gambar'],
+                                    'slug' => $laptopTampil['slug']
+                                ]
                             ]
-                        ]
-                    ];
-                    $json = $laptopPesan;
-                    $h++;
+                        ];
+                        $json = $laptopPesan;
+                        $h++;
+                    }
                 }
             }
             $jsonLaptop = json_encode($json);

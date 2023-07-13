@@ -56,10 +56,16 @@ class Pesan extends BaseController
             $keranjangTampil = $this->keranjangModel->getKeranjang($username);
             $jsonData = $keranjangTampil['id_laptop'];
             $dataArray = json_decode($jsonData, true);
+            $countData = count($dataArray);
             foreach ($dataArray as $item) {
                 foreach ($item as $key => $data) {
                     if ($data['slug'] == $slug) {
                         session()->setFlashdata('sudah_ada', 'Sudah Ada Di Keranjang');
+                        return redirect()->to('/' . $slug);
+                        break;
+                    }
+                    if ($countData >= 2) {
+                        session()->setFlashdata('sudah_ada', 'Keranjang Sudah Penuh');
                         return redirect()->to('/' . $slug);
                         break;
                     }
